@@ -1,2 +1,0 @@
-﻿#define DLLFIOGROUP_API __declspec(dllexport)
-#define DLLFIOGROUP_API __declspec(dllimport)
