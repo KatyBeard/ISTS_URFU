@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.411,D:\Projects\RAD\Ekaterina\Project1PCH1.h=D:\Projects\RAD\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.278,=D:\Projects\RAD\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.713,=D:\Projects\RAD\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.522,D:\Projects\RAD\Ekaterina\Unit1.dfm=D:\Projects\RAD\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.522,D:\Projects\RAD\Ekaterina\Unit1.h=D:\Projects\RAD\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.603,=D:\Projects\RAD\Ekaterina\dllmain.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.427,D:\Projects\RAD\Ekaterina\Project1.cbproj=D:\Projects\RAD\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.744,=D:\Projects\RAD\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.522,D:\Projects\RAD\Ekaterina\Unit1.cpp=D:\Projects\RAD\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.541,=D:\Projects\RAD\Ekaterina\dll.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.489,D:\Projects\RAD\Ekaterina\Project1.cbproj=D:\Projects\RAD\Ekaterina\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.525,=D:\Projects\RAD\Ekaterina\dll.dll</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.306,=D:\Projects\RAD\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
