@@ -20,17 +20,11 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-	int group = Group();
+      	int group = Group();
 	Edit1->Text = group;
 
-	char *ptrToBuffer;
-	int strSize = FIO(NULL);
-	ptrToBuffer = new char[strSize];
-	FIO(ptrToBuffer);
-
-//	const char* fio = FIO();
-	Edit2->Text = ptrToBuffer;
-	delete[] ptrToBuffer;
+	const char* fio = FIO();
+	Edit2->Text = fio;
 }
 //---------------------------------------------------------------------------
 

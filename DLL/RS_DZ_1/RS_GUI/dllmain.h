@@ -4,5 +4,6 @@
 extern "C"
 {
 	__declspec(dllexport) int __stdcall Group();
-	__declspec(dllexport) const char* __stdcall FIO();
+//	__declspec(dllexport) const char* __stdcall FIO();
+	__declspec(dllexport) int __stdcall FIO(char *ptrToBuffer);
 }

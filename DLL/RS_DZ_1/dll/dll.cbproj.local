@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.882,=D:\Projects\RAD\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.763,D:\Projects\RAD\File1.cpp=D:\Projects\RAD\Ekaterina\dllmain.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.785,D:\Projects\RAD\Ekaterina\dll.cbproj=D:\Projects\RAD\Ekaterina\dll.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.525,D:\Projects\RAD\Ekaterina\dll.cbproj=D:\Projects\RAD\Project1.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.518,D:\Projects\RAD\Ekaterina\dllPCH1.h=D:\Projects\RAD\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.957,=C:\Users\Екатерина\Desktop\5 курс\2 семестр\Хорьков\ISTS_URFU\DLL\RS_DZ_1\dll\dllmain.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.882,=D:\Projects\RAD\File1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.518,D:\Projects\RAD\Project1PCH1.h=D:\Projects\RAD\Ekaterina\dllPCH1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.867,=D:\Projects\RAD\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.763,D:\Projects\RAD\Ekaterina\dllmain.cpp=D:\Projects\RAD\File1.cpp</Transaction>
-    <Transaction>2023.04.15 09:31:18.957,=C:\Users\Екатерина\Desktop\5 курс\2 семестр\Хорьков\ISTS_URFU\DLL\RS_DZ_1\dll\dllmain.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.525,D:\Projects\RAD\Project1.cbproj=D:\Projects\RAD\Ekaterina\dll.cbproj</Transaction>
   </Transactions>
 </BorlandProject>
