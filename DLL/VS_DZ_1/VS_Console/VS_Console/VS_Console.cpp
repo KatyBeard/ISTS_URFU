@@ -9,7 +9,7 @@
 typedef int (__stdcall* FIO)(char*);
 typedef int(__stdcall* Group)();
 int main() {
-    HMODULE h = LoadLibraryW(L"C:\\Users\\Екатерина\\Desktop\\5 курс\\2 семестр\\Хорьков\\ISTS_URFU\\DLL\\RS_DZ_1\\dll\\Win64\\Debug\\dll.dll");
+    HMODULE h = LoadLibraryW(L"C:\\Users\\Екатерина\\Desktop\\5 курс\\2 семестр\\ИБТС\\ISTS_URFU\\DLL\\RS_DZ_1\\dll\\Win64\\Debug\\dll.dll");
     if (h == NULL) { // проверить успешно ли подключилась библиотека
         printf("load lib error\n");
         system("pause");
