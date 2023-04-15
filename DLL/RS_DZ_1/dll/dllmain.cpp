@@ -14,9 +14,17 @@ int __stdcall Group()
 	return Group;
 }
 
-const char* __stdcall FIO()
+//const char* __stdcall FIO()
+int __stdcall FIO(char *ptrToBuffer)
 {
-	setlocale(LC_ALL, "rus");
-	const char* ch = "Бородашкина Екатерина Алексеевна";
-	return ch;
+//	setlocale(LC_ALL, "rus");
+//	const char* ch = "Бородашкина Екатерина Алексеевна";
+//	return ch;
+	char fio[] = "Бородашкина Екатерина Алексеевна";
+	int count = strlen(fio);
+	if (ptrToBuffer != NULL)
+	{
+		strcpy(ptrToBuffer, fio);
+	}
+	return count + 1;
 }
