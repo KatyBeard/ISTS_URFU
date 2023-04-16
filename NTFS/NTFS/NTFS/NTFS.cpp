@@ -7,9 +7,6 @@
 
 int main()
 {
-    BYTE dataBuffer[512];
-    NTFSBootRecord* pNTFSBootRecord = (NTFSBootRecord*)dataBuffer;
-
     HANDLE cFile = CreateFileW(
         L"\\\\.\\C:",    // Открываем диск С
         GENERIC_READ,   //  Запрос доступа к диску для чтения
@@ -26,8 +23,32 @@ int main()
         system("pause");
         return 0;
     }
-    else { printf("It's okey ^_^\n"); system("pause"); return 0;
+    /*else { printf("It's okey ^_^\n"); system("pause"); return 0;
+    }*/
+
+    LARGE_INTEGER sectorOffset;
+    sectorOffset.QuadPart = 0;
+
+    unsigned long currentPosition = SetFilePointer(
+        cFile,  //  Дескриптор файла
+        sectorOffset.LowPart,   //  Байты перемещения указателя
+        & sectorOffset.HighPart,
+        FILE_BEGIN  //  Точка отсчета равняется нулю или это начало файла
+    );
+
+    // Проверка на ошибку
+    if (currentPosition == INVALID_SET_FILE_POINTER && (currentPosition = GetLastError()) != NO_ERROR || currentPosition != sectorOffset.LowPart)
+    {
+        printf("\nOffset ERROR :(\n\nTry to run the app again\n");
+        system("pause");
+        return 0;
     }
+    else {
+        printf("It's okey ^_^\n"); system("pause"); return 0;
+    }
+
+    BYTE dataBuffer[512];
+    NTFSBootRecord *currentRecord = (NTFSBootRecord*)dataBuffer;
 }
 
 
