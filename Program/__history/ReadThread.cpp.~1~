@@ -36,6 +36,7 @@ __fastcall ReadThread::ReadThread(bool CreateSuspended, IteratorFS* Iterator, TF
 //---------------------------------------------------------------------------
 void __fastcall ReadThread::Execute()
 {
+	Synchronize(&OnStart);
 	WriteThreadPtr->Start(); // запускаем поток, который будет обрабатывать данные
 
 	// сначала первое состо€ние - переход в режим готовности,
@@ -63,10 +64,20 @@ void __fastcall ReadThread::Execute()
 
 	WriteThreadPtr->Terminate();   // завершаем поток процесса
 
+	Synchronize(&OnStop);
 	WriteThreadPtr->WaitFor();  // ждем, пока ProcessThread не завершитс€
 
 	delete WriteThreadPtr;   // очистка указател€ на поток
 }
 //---------------------------------------------------------------------------
 
+void __fastcall ReadThread::OnStart() {
+	Form1->LabelScanStart->Enabled = true; //  нопка сканировать
+	Form1->LabelScanEnd->Enabled = false;  //  нопка прервать сканирование
+}
+
+void __fastcall ReadThread::OnStop() {
+	Form1->LabelScanStart->Enabled = false;    //  нопка сканировать
+	Form1->LabelScanEnd->Enabled = true;       //  нопка прервать сканирование
+}
 

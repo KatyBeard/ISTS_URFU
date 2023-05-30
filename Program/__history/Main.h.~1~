@@ -41,6 +41,8 @@ __published:	// IDE-managed Components
 	TCheckListBox *CheckListBoxType;
 	TVirtualStringTree *VirtualStringTree1;
 	TButton *ButtonScanStop;
+	TLabel *LabelScanStart;
+	TLabel *Label5;
 	void __fastcall ButtonSelectVolumeClick(TObject *Sender);
 	void __fastcall ButtonSelectBDClick(TObject *Sender);
     void __fastcall ButtonScanClick(TObject *Sender);
@@ -52,15 +54,15 @@ __published:	// IDE-managed Components
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
-    // РЎСЃС‹Р»РєР° РЅР° Р‘Р”
+    // Ссылка на БД
 	sqlite3* Database;
-    // РЎРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… С‚РёРїРѕРІ С„Р°Р№Р»РѕРІ
-	// (РІСЃС‘ С‡С‚Рѕ Р±С‹Р»Рѕ РѕС‚РјРµС‡РµРЅРѕ РІ CheckListBox)
-	// РІРµРєС‚РѕСЂ, СЃРѕСЃС‚РѕСЏС‰РёР№ РёР· РєРѕР»-РІР° РІС‹Р±СЂР°РЅРЅС‹С… СЃРёРіРЅР°С‚СѓСЂ, С‚РёРїР° UnicodeString
+    // Список выбранных типов файлов
+	// (всё что было отмечено в CheckListBox)
+	// вектор, состоящий из кол-ва выбранных сигнатур, типа UnicodeString
 	std::vector<UnicodeString> SelectedTypes;
 
-	// РЎСЃС‹Р»РєР° РЅР° С„Р°Р№Р»РѕРІСѓСЋ СЃРёСЃС‚РµРјСѓ
-	class ClassFS* FileSystem;     // Р’ РґР°РЅРЅРѕР№ СЂРµР°Р»РёР·Р°С†РёРё РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ NTFS
+	// Ссылка на файловую систему
+	class ClassFS* FileSystem;     // В данной реализации может быть только NTFS
 	class ReadThread* ReadThreadPtr;
 };
 //---------------------------------------------------------------------------
@@ -68,7 +70,7 @@ extern PACKAGE TForm1 *Form1;
 //---------------------------------------------------------------------------
 
 
-// РќРµРѕС…РѕРґРёРјР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° С‚Р°Р±Р»РёС†С‹ РІ Р‘Р”:
+// Неоходимая структура таблицы в БД:
 /*
 CREATE TABLE "scans" (
 	"id"	INTEGER NOT NULL UNIQUE,

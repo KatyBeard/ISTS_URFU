@@ -19,8 +19,6 @@ protected:
 	void __fastcall Execute();
 public:
 	__fastcall ReadThread(bool CreateSuspended, IteratorFS* Iterator, TForm1* Form1, bool useTypeFileSearch);
-	void __fastcall OnStart(); // когда только запущен поток
-	void __fastcall OnStop();   // поток завершается, выводится информация на форму
 };
 //---------------------------------------------------------------------------
 #endif

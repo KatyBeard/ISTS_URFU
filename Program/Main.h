@@ -41,8 +41,6 @@ __published:	// IDE-managed Components
 	TCheckListBox *CheckListBoxType;
 	TVirtualStringTree *VirtualStringTree1;
 	TButton *ButtonScanStop;
-	TLabel *LabelScanStart;
-	TLabel *Label5;
 	void __fastcall ButtonSelectVolumeClick(TObject *Sender);
 	void __fastcall ButtonSelectBDClick(TObject *Sender);
     void __fastcall ButtonScanClick(TObject *Sender);

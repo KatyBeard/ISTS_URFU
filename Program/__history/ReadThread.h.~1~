@@ -12,13 +12,15 @@ class ReadThread : public TThread
 {
 private:
 	class IteratorFS* Iterator;
-	class WriteThread* WriteThreadPtr;   // РµСЃС‚СЊ СЃСЃС‹Р»РєР° РЅР° РґСЂСѓРіРѕР№ РїРѕС‚РѕРє-РїСЂРѕС†РµСЃСЃ
+	class WriteThread* WriteThreadPtr;   // есть ссылка на другой поток-процесс
 	class TForm1* Form1;
-	TEvent* MyEvent;  // РµСЃС‚СЊ СЃСЃС‹Р»РєР° РЅР° MyEvent РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ "РѕР±С‰Р°С‚СЊСЃСЏ" СЃ WriteThread
+	TEvent* MyEvent;  // есть ссылка на MyEvent для того, чтобы "общаться" с WriteThread
 protected:
 	void __fastcall Execute();
 public:
 	__fastcall ReadThread(bool CreateSuspended, IteratorFS* Iterator, TForm1* Form1, bool useTypeFileSearch);
+	void __fastcall OnStart(); // когда только запущен поток
+	void __fastcall OnStop();   // поток завершается, выводится информация на форму
 };
 //---------------------------------------------------------------------------
 #endif
